@@ -1,11 +1,11 @@
-import testPage from '../pages/testPage.vue'
-import testPage2 from '../pages/testPage2.vue'
+import page from '../pages/test1/test1.vue'
+import range from '../pages/test2/test2.vue'
 
 export default [{
-    path: '/',
-    component: testPage
+    path: '/page',
+    component: page
 }, {
-    path:'/test2',
-    component:testPage2
+    path:'/range',
+    component:range
 }]
 
