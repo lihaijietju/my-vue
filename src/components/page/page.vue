@@ -14,18 +14,17 @@
 <style lang="scss">
     body {
         background-color: #eee;
-        color:white;
+        color: white;
     }
-
 
     .page_box li {
         display: inline-block;
-        width:30px;
+        width: 30px;
         height: 30px;
         line-height: 30px;
         cursor: pointer;
         margin: 0;
-        border:1px solid #ddd;
+        border: 1px solid #ddd;
         text-align: center;
     }
 
@@ -41,25 +40,25 @@
         name: 'pagenation',
         props: {
             total: {
-                type: Number
+                type: Number,
             },
             currentIndex: {
                 type: Number,
-                default: 1
+                default: 1,
             },
             changePage: {
-                type: Function
-            }
+                type: Function,
+            },
         },
-        mounted(){
+        mounted() {
             this.initPage();
         },
-        data(){
+        data() {
             return {
                 show_page_numbers: [],
                 display_limit: 7,
-                currentPage: this.currentIndex
-            }
+                currentPage: this.currentIndex,
+            };
         },
         methods: {
             initPage(){
@@ -77,7 +76,8 @@
                 let begin = this.currentPage - 3;
                 let end = this.currentPage + 3;
                 begin = begin > 0 ? begin : 1;
-                begin = begin > (this.total - this.display_limit) ? (this.total - this.display_limit) : begin;
+                begin = begin > (this.total - this.display_limit) ?
+                    (this.total - this.display_limit) : begin;
 
                 end = end >= this.total ? this.total : end;
                 end = end < this.display_limit ? this.display_limit : end;
@@ -86,14 +86,14 @@
                 this.show_page_numbers = arr;
             },
             pre(){
-                if(this.currentPage===1){
+                if (this.currentPage === 1) {
                     return;
                 }
                 this.currentPage = this.currentPage - 1;
                 this.setIndex(this.currentPage);
             },
             next(){
-                if(this.currentPage===this.total){
+                if (this.currentPage === this.total) {
                     return;
                 }
                 this.currentPage = this.currentPage + 1;
@@ -102,10 +102,10 @@
             setIndex(index){
                 this.currentPage = index;
                 this.initPage();
-            }
+            },
 
-        }
-    }
+        },
+    };
 
 
 </script>

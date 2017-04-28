@@ -1,3 +1,3 @@
 export default{
-    "MENU":"/menu"
-}
+    'MENU': '/menu',
+};

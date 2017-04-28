@@ -1,17 +1,17 @@
 <template>
-<div>
     <div>
-        <router-link to="/page">page</router-link>
-        <router-link to="/range">range</router-link>
+        <div>
+            <router-link to="/page">page</router-link>
+            <router-link to="/range">range</router-link>
+        </div>
+        <router-view></router-view>
     </div>
-    <router-view></router-view>
-</div>
 </template>
 
 <script>
     import page from './components/page';
     import Vue from 'vue';
-    import basic from './assets/css/base.css';
+    //    import basic from './assets/css/base.css';
     Vue.use(page);
     export default {
         name: 'app',
@@ -27,7 +27,7 @@
             change(target) {
                 this.test = target;
             },
-        }
+        },
     };
 
 </script>

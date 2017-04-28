@@ -1,5 +1,5 @@
 <template>
-    <pagenation :current="2" :total="40"></pagenation>
+    <pagenation :current="2" :total="400"></pagenation>
 </template>
 <style lang="scss">
     body {
@@ -14,11 +14,11 @@
     export default{
         data(){
             return {
-                msg: 'hello vue'
-            }
+                msg: 'hello vue',
+            };
         },
         components: {
             'page': page,
-        }
-    }
+        },
+    };
 </script>
